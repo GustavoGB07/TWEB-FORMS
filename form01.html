@@ -1,0 +1,82 @@
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inscrição nos jogos escolares</title>
+    </head>
+    <body>
+    <header>
+        <h1>Inscrição nos jogos escolares</h1>
+    </header>
+    <main>
+        <form id="inscricao-jogos" method="post" action="/inscricoes-jogos" enctype="multipart/form-data">
+            <fieldset>
+            <legend>1. IDENTIFICAÇÃO DO ATLETA</legend>
+                    <label for="nome-atleta">Nome completo do atleta (obrigatório):</label>
+                    <input type="text" id="nome-atleta" name="nome_atleta" required>
+                    <br>
+                    <label for="nome-social">Nome social:</label>
+                    <input type="text" name="nome_social" id="nome-social">
+                    <br>
+                    <label for="matricula">Matrícula (Obrigatória):</label>
+                    <input type="text" name="matricula" id="matricula" required>
+                    <br>
+                    <label for="data-nascimento">Data de nascimento:</label>
+                    <input type="date" name="data_nascimento" id="data-nascimento">
+                    <br>
+                    <label for="email-atleta">E-mail de contato (Obrigatório):</label>
+                    <input type="email" id="email-atleta" name="email_atleta" required>
+                    <br>
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" name="telefone" id="telefone">
+                    <br>
+                    <label for="site-escola">Site da escola:</label>
+                    <input type="url" name="site_escola" id="site-escola" value="https://">
+            </fieldset>
+            <fieldset>
+                <legend>ESCOLA E DELEGAÇÃO</legend>
+                <label for="escola">Digite ou escolha uma escola </label>
+                <select name="escola" id="escola">
+                    <option value="CSJB">Colégio São João Batista</option>
+                    <option value="ECA">Escola Celso Araújo</option>
+                    <option value="AI">Amiguinhos de infância</option>
+                </select>
+                <br>
+                <label for="turma">Turma:</label>
+                <input type="search" name="turma" id="turma" list="lista-escola">
+                <datalist id="lista-escola">
+                    <option value="Ensino Fundamental 8 ano">Ensino fundamental: 8° ano</option>
+                    <option value="Ensino Fundamental 9 ano">Ensino fundamental: 9° ano</option>
+                    <option value="Ensino Medio 1 ano">Ensino médio: 1° ano</option>
+                    <option value="Ensino Medio 2 ano">Ensino médio: 2° ano</option>
+                    <option value="Ensino Medio 3 ano">Ensino médio: 3° ano</option>
+                </datalist>
+                <br>
+                <label for="equipe">Equipe:</label>
+                <select name="equipe" id="equipe">
+                    <option value="Horizonte">Equipe Horizonte</option>
+                    <option value="Luau">Equipe Luau</option>
+                    <option value="Amanhecer">Equipe Amanhecer</option>
+                </select>
+                <br>
+                <label for="professor-responsável">Professor Responsável:</label>
+                <select name="professor" id="professor-responsável">
+                    <option value="Laura">Laura</option>
+                    <option value="Mauricio">Maurício</option>
+                    <option value="Joao">João</option>
+                </select>
+                <br>
+                <label for="telefone">Telefone:</label>
+                <input type="search" name="telefone" id="telefone" list="professor-telefone">
+                <datalist id="professor-telefone">
+                    <option value="88 975678900">Laura</option>
+                    <option value="88 976532719">Maurício</option>
+                    <option value="88 989735122">João</option>
+                </datalist>
+            </fieldset>
+        </form>
+   
+</main>
+</body>
+</html>
