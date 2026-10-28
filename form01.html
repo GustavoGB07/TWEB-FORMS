@@ -35,7 +35,7 @@
                     <input type="url" name="site_escola" id="site-escola" value="https://">
             </fieldset>
             <fieldset>
-                <legend>ESCOLA E DELEGAÇÃO</legend>
+                <legend>2. ESCOLA E DELEGAÇÃO</legend>
                 <label for="escola">Digite ou escolha uma escola </label>
                 <select name="escola" id="escola">
                     <option value="CSJB">Colégio São João Batista</option>
@@ -74,6 +74,55 @@
                     <option value="88 976532719">Maurício</option>
                     <option value="88 989735122">João</option>
                 </datalist>
+            </fieldset>
+            <fieldset>
+                <legend>3. Participação nos jogos</legend>
+                <label for="modalidade">Modalidade principal (obrigatória):</label>
+                <input type="search" name="modalidade" id="modalidade" list="lista-modalidade">
+                <datalist id="lista-modalidade">
+                    <option value="Futsal">Modalidade Coletiva</option>
+                    <option value="Voleibol">Modalidade Coletiva</option>
+                    <option value="Basquetebol">Modalidade Coletiva</option>
+                    <option value="Handebol">Modalidade Coletiva</option>
+                    <option value="Atletismo">Modalidade Individual</option>
+                    <option value="Natacao">Modalidade Individual</option>
+                    <option value="Xadrez">Modalidade Individual</option>
+                    <option value="Tenis-de-Mesa">Modalidade Individual</option>
+                </datalist>
+                <br>
+                <legend>Turno de preferência:</legend>
+                <input type="radio" name="turno" id="turno-manha">
+                <label for="turno-manha">Manhã</label>
+                <input type="radio" name="turno" id="turno-tarde">
+                <label for="turno-tarde">Tarde</label>
+                <input type="radio" name="turno" id="turno-noite">
+                <label for="turno-noite">Noite</label>
+                <br>
+                <legend>Modalidades de interesse:</legend>
+                <input type="checkbox" name="modalidade" id="futsal" value="futsal">
+                <label for="futsal">Futsal</label>
+                <input type="checkbox" name="modalidade" id="voleibol" value="voleibol">
+                <label for="voleibol">Voleibol</label>
+                <input type="checkbox" name="modalidade" id="basquetebol" value="basquetebol">
+                <label for="basquetebol">Basquetebol</label>
+                <br>
+                <input type="checkbox" name="modalidade" id="handebol" value="handebol">
+                <label for="handebol">Handebol</label>
+                <input type="checkbox" name="modalidade" id="atletismo" value="atletismo">
+                <label for="atletismo">Atletismo</label>
+                <input type="checkbox" name="modalidade" id="natacao" value="natacao">
+                <label for="natacao">Natação</label>
+                <br>
+                <input type="checkbox" name="modalidade" id="xadrez" value="xadrez">
+                <label for="xadrez">Xadrez</label>
+                <input type="checkbox" name="modalidade" id="tenis-de-mesa" value="tenis-de-mesa">
+                <label for="tenis-de-mesa">Tênis de mesa</label>
+                <br>
+                <label for="quantidade-acompanhantes">Quantidade de acompanhantes:</label>
+                <input type="number" name="quantidade_acompanhantes" id="quantidade-acompanhantes">
+            </fieldset>
+            <fieldset>
+                <legend>4. PREPARAÇÃO E DISPONIBILIDADE</legend>
             </fieldset>
         </form>
    
