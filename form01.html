@@ -37,21 +37,28 @@
             <fieldset>
                 <legend>2. ESCOLA E DELEGAÇÃO</legend>
                 <label for="escola">Digite ou escolha uma escola </label>
-                <select name="escola" id="escola">
+                <input type="search" name="escola" id="escola" list="lista-escola">
+                <datalist id="lista-escola">
                     <option value="CSJB">Colégio São João Batista</option>
                     <option value="ECA">Escola Celso Araújo</option>
                     <option value="AI">Amiguinhos de infância</option>
-                </select>
+                    <option value="IFCE">Instituto Federal Campus Cedro</option>
+                    <option value="EEPFAM">Escola Profissional Francisca de Alburquerque Moura</option>
+                </datalist>
                 <br>
                 <label for="turma">Turma:</label>
                 <input type="search" name="turma" id="turma" list="lista-escola">
-                <datalist id="lista-escola">
-                    <option value="Ensino Fundamental 8 ano">Ensino fundamental: 8° ano</option>
-                    <option value="Ensino Fundamental 9 ano">Ensino fundamental: 9° ano</option>
-                    <option value="Ensino Medio 1 ano">Ensino médio: 1° ano</option>
-                    <option value="Ensino Medio 2 ano">Ensino médio: 2° ano</option>
-                    <option value="Ensino Medio 3 ano">Ensino médio: 3° ano</option>
-                </datalist>
+                <select name="lista_escola" id="lista-escola">
+                    <optgroup label="Ensino Fundamental">
+                        <option value="EF-8-ano">Ensino fundamental: 8° ano</option>
+                        <option value="EF-9-ano">Ensino fundamental: 9° ano</option>
+                    </optgroup>
+                    <optgroup label="Ensino Médio">
+                        <option value="EM-1-ano">Ensino médio: 1° ano</option>
+                        <option value="EM-2-ano">Ensino médio: 2° ano</option>
+                        <option value="EM-3-ano">Ensino médio: 3° ano</option>
+                    </optgroup>
+                </select>
                 <br>
                 <label for="equipe">Equipe:</label>
                 <select name="equipe" id="equipe">
@@ -78,48 +85,70 @@
             <fieldset>
                 <legend>3. Participação nos jogos</legend>
                 <label for="modalidade">Modalidade principal (obrigatória):</label>
-                <input type="search" name="modalidade" id="modalidade" list="lista-modalidade">
-                <datalist id="lista-modalidade">
-                    <option value="Futsal">Modalidade Coletiva</option>
-                    <option value="Voleibol">Modalidade Coletiva</option>
-                    <option value="Basquetebol">Modalidade Coletiva</option>
-                    <option value="Handebol">Modalidade Coletiva</option>
-                    <option value="Atletismo">Modalidade Individual</option>
-                    <option value="Natacao">Modalidade Individual</option>
-                    <option value="Xadrez">Modalidade Individual</option>
-                    <option value="Tenis-de-Mesa">Modalidade Individual</option>
-                </datalist>
+                <select name="lista_modalidade" id="lista-modalidade">
+                    <optgroup label="Modalidade Coletiva">
+                        <option value="Futsal">Futsal</option>
+                        <option value="Voleibol">Voleibol</option>
+                        <option value="Basquetebol">Basquetebol</option>
+                        <option value="Handebol">Handebol</option>
+                    </optgroup>
+                    <optgroup label="Modalidade Individual">
+                        <option value="Atletismo">Atletismo</option>
+                        <option value="Natacao">Natacao</option>
+                        <option value="Xadrez">Xadrez</option>
+                        <option value="Tenis-de-Mesa">Tenis-de-Mesa</option>
+                    </optgroup>
+                </select>
                 <br>
                 <legend>Turno de preferência:</legend>
-                <input type="radio" name="turno" id="turno-manha">
+                <input type="radio" name="turno" id="turno-manha" value="turno-manha">
                 <label for="turno-manha">Manhã</label>
-                <input type="radio" name="turno" id="turno-tarde">
+                <input type="radio" name="turno" id="turno-tarde" value="turno-tarde">
                 <label for="turno-tarde">Tarde</label>
-                <input type="radio" name="turno" id="turno-noite">
+                <input type="radio" name="turno" id="turno-noite" value="turno-noite">
                 <label for="turno-noite">Noite</label>
                 <br>
                 <legend>Modalidades de interesse:</legend>
-                <input type="checkbox" name="modalidade" id="futsal" value="futsal">
+                <input type="checkbox" name="modalidades" id="futsal" value="futsal">
                 <label for="futsal">Futsal</label>
-                <input type="checkbox" name="modalidade" id="voleibol" value="voleibol">
+                <input type="checkbox" name="modalidades" id="voleibol" value="voleibol">
                 <label for="voleibol">Voleibol</label>
-                <input type="checkbox" name="modalidade" id="basquetebol" value="basquetebol">
+                <input type="checkbox" name="modalidades" id="basquetebol" value="basquetebol">
                 <label for="basquetebol">Basquetebol</label>
                 <br>
-                <input type="checkbox" name="modalidade" id="handebol" value="handebol">
+                <input type="checkbox" name="modalidades" id="handebol" value="handebol">
                 <label for="handebol">Handebol</label>
-                <input type="checkbox" name="modalidade" id="atletismo" value="atletismo">
+                <input type="checkbox" name="modalidades" id="atletismo" value="atletismo">
                 <label for="atletismo">Atletismo</label>
-                <input type="checkbox" name="modalidade" id="natacao" value="natacao">
+                <input type="checkbox" name="modalidades" id="natacao" value="natacao">
                 <label for="natacao">Natação</label>
                 <br>
-                <input type="checkbox" name="modalidade" id="xadrez" value="xadrez">
+                <input type="checkbox" name="modalidades" id="xadrez" value="xadrez">
                 <label for="xadrez">Xadrez</label>
-                <input type="checkbox" name="modalidade" id="tenis-de-mesa" value="tenis-de-mesa">
+                <input type="checkbox" name="modalidades" id="tenis-de-mesa" value="tenis-de-mesa">
                 <label for="tenis-de-mesa">Tênis de mesa</label>
                 <br>
+                <label for="camiseta">Tamanho da camiseta</label>
+                <select name="camiseta" id="camiseta">
+                    <option value="PP">PP</option>
+                    <option value="P">P</option>
+                    <option value="M">M</option>
+                    <option value="G">G</option>
+                    <option value="GG">GG</option>
+                </select>
+                <br>
+                <legend>Participação em atividades complementares:</legend>
+                <input type="checkbox" name="participacao_abertura" id="participacao-abertura" value="participacao-abertura">
+                <label for="participacao-abertura">Cerimônia de abertura</label>
+                <br>
+                <input type="checkbox" name="participacao_oficina" id="participacao-oficina" value="participacao-oficina">
+                <label for="participacao-oficina">Oficina de aarbitragem</label>
+                <br>
+                <input type="checkbox" name="participacao_organizacao" id="participacao-organizacao" value="participacao-organizacao">
+                <label for="participacao-organizacao">Organização das equipes</label>
+                <br>
                 <label for="quantidade-acompanhantes">Quantidade de acompanhantes:</label>
-                <input type="number" name="quantidade_acompanhantes" id="quantidade-acompanhantes">
+                <input type="number" name="quantidade_acompanhantes" id="quantidade-acompanhantes" value="2">
             </fieldset>
             <fieldset>
                 <legend>4. PREPARAÇÃO E DISPONIBILIDADE</legend>
@@ -154,8 +183,19 @@
                 <label for="senha">Senha:</label>
                 <input type="password" name="senha" id="senha">
                 <br>
-                <label for=""></label>
+                <input type="checkbox" name="confirm" id="confirm" value="confirm" required>
+                <label for="confirm">Li as orientações desta atividade (obrigatório)</label>
+                <br>
+                <button type="submit" name="acao" value="inscrever">Confirmar Inscrição</button>
+                <input type="submit" value="Enviar Inscrição">
+                <br>
+                <input type="reset" value="restaurar valores iniciais">
+                <input type="button" value="ajuda demonstrativa">
+                <!-- ainda não possui ação-->
             </fieldset>
+
+            <label for="campos">Campo não visual:</label>
+            <input type="hidden" name="edicao" id="campos" value="jogos-2026">
         </form>
    
 </main>
